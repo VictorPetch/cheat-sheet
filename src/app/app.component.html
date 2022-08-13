@@ -45,11 +45,26 @@
 		<div>ViewChildren(component)</div>
 		<div>ViewChildren(templateRef)</div>
 		<div>Hooks</div>
+		<div>Deploying to github pages</div>
 	</div>
 	<!-- #endregion -->
 
+	<!-- #region Deploy to github pages -->
+	<p>To deploy to github pages, build your application like so:</p>
 
-	<pre class="code-text-section" ngNonBindable>
+	<pre class="code-text-section">
+
+		{{'ng build --output-path docs --base-href /&lt;project-name&gt;/' }}
+		You can also change the outputPath property on your angular.json,
+		following the json propert: "projects/&lt;project-name&gt;/architect/build/options"
+		to "docs" and omit the --output-path parameter.
+		Remeber to change &lt;project-name&lt; like so:
+		ng build --base-href /cheat-sheet/
+	</pre>
+	<!-- #endregion -->
+
+	<!-- #region Setting font -->
+	<pre class="code-text-section">
 		Setting font using @font-face.
 		Download the font zip and put it inside a folder.
 		For example: src/assets/font
@@ -81,9 +96,11 @@
 		font-weight: 100
 		&#123;
 	</pre>
+	<!-- #endregion -->
 
+	<!-- #region Double click directive -->
 	<pre class="code-text-section">
-		
+
 		Double click
 		// RxJS v6+  
 		import &#123; fromEvent &#125; from 'rxjs';
@@ -101,8 +118,9 @@
 		)
 		.subscribe(() => console.log('Double Click!'));
 	</pre>
+	<!-- #endregion -->
 
-
+	<!-- #region Table trick -->
 	<pre class="code-text-section">
 		<div>
 			Table trick
@@ -140,9 +158,10 @@
 			<div style="display: table-cell;background-color: green;">Pineapple</div>
 		</div>
 	</pre>
+	<!-- #endregion -->
 
 	<app-card>
-		
+
 	</app-card>
 
 </div>
