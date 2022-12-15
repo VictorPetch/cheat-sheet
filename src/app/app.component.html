@@ -29,8 +29,9 @@
 	<div style="margin-bottom: 1rem;">
 		<h3 class="title">ToDo List</h3>
 		<div>Init angular project</div>
-		<div>Directive</div>
 		<div>Component</div>
+		<div>Routing</div>
+		<div>Directive</div>
 		<div>ngModel</div>
 		<div>Events</div>
 		<div>Button</div>
@@ -46,25 +47,52 @@
 		<div>ViewChildren(templateRef)</div>
 		<div>Hooks</div>
 		<div>Deploying to github pages</div>
+		<div>Injeção de dependencia</div>
 	</div>
 	<!-- #endregion -->
 
 	<!-- #region Deploy to github pages -->
-	<p>To deploy to github pages, build your application like so:</p>
+	<div>
+		<h3 class="title">Deploy to github pages</h3>
+		<p>
+			It's possible to deploy your angular application to Github Pages.
+			<br>
+			To deploy to github pages, build your application like so:
+		</p>
+		<p></p>
+		<pre class="code-text-section">{{textDict['deploy1']}}</pre>
 
-	<pre class="code-text-section">
+		<p>
+			The --base-href flag should be set so Github finds the application folder. <br>
+			&lt;project-name&gt; can be found in the angular.json file, directly under projects:
+		</p>
+		<pre class="code-text-section">{{textDict['deploy3']}}</pre>
 
-		{{'ng build --output-path docs --base-href /&lt;project-name&gt;/' }}
-		You can also change the outputPath property on your angular.json,
-		following the json propert: "projects/&lt;project-name&gt;/architect/build/options"
-		to "docs" and omit the --output-path parameter.
-		Remeber to change &lt;project-name&lt; like so:
-		ng build --base-href /cheat-sheet/
-	</pre>
+		<p>The --output-path flag creates a folder named docs and compiles the project there.
+		</p>
+		<p>
+			You can also change the outputPath property on your angular.json,
+			following the json properties:
+		</p>
+		<pre class="code-text-section">{{textDict['deploy2']}}</pre>
+		<br>
+		<p>
+			Access the Settings tab in your repository at Github. <br>
+			<img src="../assets/images/deploy1.png" alt="">
+			Under Code and automation, select the Pages section and change
+			the folder at which the Github Pages is building your application to /docs:
+		</p>
+		<img src="../assets/images/deploy2.png" alt="">
+		<img src="../assets/images/deploy3.png" alt="">
+
+	</div>
+
 	<!-- #endregion -->
 
 	<!-- #region Setting font -->
-	<pre class="code-text-section">
+	<div>
+		<h3 class="title">Setting global font</h3>
+		<pre class="code-text-section">
 		Setting font using @font-face.
 		Download the font zip and put it inside a folder.
 		For example: src/assets/font
@@ -92,10 +120,11 @@
 		styles.scss:
 		@import '../src/assets/styles/font';
 		body &#123;
-		font-family: 'Roboto'
-		font-weight: 100
+		&#09; font-family: 'Roboto'
+		a	font-weight: 100
 		&#123;
 	</pre>
+	</div>
 	<!-- #endregion -->
 
 	<!-- #region Double click directive -->

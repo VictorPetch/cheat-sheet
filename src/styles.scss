@@ -2,7 +2,7 @@
 @import '../src/assets/styles/variables';
 @import '../src/assets/styles/font';
 
-html{
+html {
 	height: 100%;
 }
 
@@ -16,8 +16,7 @@ body {
 	margin: 0px;
 }
 
-
-
+/* #region Flex display */
 .flex {
 	display: flex
 }
@@ -26,6 +25,25 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+/* #endregion */
 
+/* #region Code section */
+// Used with class below 
+pre {
+	font-size: 16px;
+}
 
+// Section with code
+.code-text-section {
+	background: rgba(255, 255, 255, .01);
+	border: .5px solid rgba(255, 255, 255, .2);
+	padding: 20px;
+	border-radius: 5px;
+	margin: 0.5rem 0px;
+	font-size: 16px;
+	white-space: pre;
+	tab-size: 2;
+	overflow-x: auto;
+}
 
+/* #endregion */

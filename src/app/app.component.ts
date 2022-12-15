@@ -7,4 +7,41 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cheat-sheet';
+
+  text = 
+`{
+	"projects": {
+		"<project-name>": {
+			"architect": {
+				"build":{
+					"options" : {
+						"outputPath": "docs",
+					}
+				}
+			}
+		} 
+	}
+}`
+
+text2 = `ng build --output-path docs --base-href /<project-name>/`
+
+textDict = {
+	'deploy1': `ng build --output-path docs --base-href /<project-name>/`,
+	'deploy2': `{
+	"projects": {
+		"<project-name>": {
+			"architect": {
+				"build":{
+					"options" : {
+						"outputPath": "docs",
+					}
+				}
+			}
+		} 
+	}\n}`,
+	'deploy3': `{
+	"projects": {
+		"<project-name>"
+	}\n}`,
+  };
 }
