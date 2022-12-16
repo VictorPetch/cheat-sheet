@@ -43,5 +43,10 @@ textDict = {
 	"projects": {
 		"<project-name>"
 	}\n}`,
+	'image1': `index.html\nassets
+	images
+		image1.png`,
+	'image2': `<img src="assets/images/deploy2.png">`,
+		
   };
 }
