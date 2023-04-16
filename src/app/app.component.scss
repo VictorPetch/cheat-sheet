@@ -1,7 +1,7 @@
 @import '../assets/styles/variables';
 
 // Pseudo navbar on top
-.header{
+.header {
 	background-color: map-get($cyan-pallete, base);
 	color: $cyan-contrast;
 	padding: 28px 8px;
@@ -9,27 +9,23 @@
 	font-size: 24px;
 	font-weight: 400;
 	margin: 0px;
-	position: fixed;
+	position: sticky;
 	top: 0;
-	left: 0;
-	right: 0;
 	z-index: 2;
 }
 
 // Pretty much the body
-.content{
+.content {
 	padding: 30px 120px 0;
 	width: 60%;
 	margin: 84px auto 0;
 }
 
-p{
+p {
 	margin-top: 0px;
 }
 
 // Margin of title
-.title-big{
+.title-big {
 	margin: 30px 0px
 }
-
-
