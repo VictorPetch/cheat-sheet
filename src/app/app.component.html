@@ -1,6 +1,8 @@
-<h1 class="header">Angular for dummies</h1>
+<!-- <h1 class="header">Angular for dummies</h1> -->
 
-<div class="flex-column content">
+<div class="header"></div>
+
+<div class="flex-column content" *ngIf="false">
 
 	<!-- #region Introduction -->
 	<h1 class="title-big">Cheat Sheet</h1>
@@ -259,7 +261,8 @@
 		</div>
 		<p>
 			Change -webkit-line-clamp value to set the max number of lines before the overflow is forced. <br>
-			Note that the element that contains the text has a responsive width (usually 100% to make it use all the remaining space).
+			Note that the element that contains the text has a responsive width (usually 100% to make it use all the
+			remaining space).
 			It won't work if you do it like this:
 		</p>
 		<pre>
@@ -274,4 +277,44 @@
 
 	</app-card>
 
+	<!-- #region Horizontal List -->
+	<h3 class="title">Horizontal List</h3>
+	<p>since divs have display:block, they tend to occupy the same width of the parent.</p>
+	<div style="height: 100px;border: 1px solid cyan;">
+	</div>
+	<p>This div has display: flex. That means divs inside it won't have the same width of the parent.</p>
+	<div class="flex" style="height: 100px;border: 1px solid cyan;">
+		<div style="height: 100px;border: 1px solid red;"></div>
+		<div style="height: 100px;border: 1px solid white;"></div>
+	</div>
+	<p>You can set width to 100% so that both divs occupy as much space as possible</p>
+	<div class="flex" style="height: 100px;border: 1px solid cyan;">
+		<div style="width:100%;height: 100px;background-color: red;"></div>
+		<div style="width:100%;height: 100px;background-color: white;"></div>
+	</div>
+	<p>However, let's say we have a dynamic number of divs. They can easily overflow the parent div. You can use the
+		overflow-x: auto to achieve that</p>
+	<div class="flex" style="height: 100px;border: 1px solid cyan;overflow-x:auto">
+		<div style="width:200px;height: 100px;background-color: red;"></div>
+		<div style="width:200px;height: 100px;background-color: white;"></div>
+		<div style="width:200px;height: 100px;background-color: red;"></div>
+		<div style="width:200px;height: 100px;background-color: white;"></div>
+	</div>
+	<p>If we just set the width property, the divs are flattened to don't cause overflow.</p>
+	<p>Even though their width is 200px, on the screen they are less than that.</p>
+	<p>To achieve overflow, we'll use min-width: 200</p>
+	<div class="flex" style="height: 100px;border: 1px solid cyan;overflow-x:auto">
+		<div style="min-width:200px;height: 100px;background-color: red;"></div>
+		<div style="min-width:200px;height: 100px;background-color: white;"></div>
+		<div style="min-width:200px;height: 100px;background-color: red;"></div>
+		<div style="min-width:200px;height: 100px;background-color: white;"></div>
+	</div>
+	<!-- #endregion -->
+
+	<!-- #region  -->
+	Routing
+	<!-- #endregion -->
+
 </div>
+
+<router-outlet></router-outlet>
