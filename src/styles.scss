@@ -44,8 +44,37 @@ pre {
 	margin: 0.5rem 0px;
 	font-size: 16px;
 	white-space: pre;
-	tab-size: 2;
+	tab-size: 4;
 	overflow-x: auto;
+
+	.code-purple{
+		color: #c586c0;
+	}
+
+	.code-light-blue{
+		color: #9ccfde;
+	}
+	.code-green{
+		color: #49bd8f;
+	}
+
+	.code-orange{
+		color: #ce9173;
+	}
+
+	.code-dark-blue{
+		color: #549ad1;
+	}
 }
 
 /* #endregion */
+
+// Links
+a{
+	color: orange;
+}
+
+// Section title
+h3{
+	color: $strong-pink;
+}
