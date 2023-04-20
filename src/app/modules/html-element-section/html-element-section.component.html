@@ -1,0 +1,31 @@
+<h3>HTML elements on typescript</h3>
+<p>
+	HTML elements are represented by the
+	<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement interface</a>.
+	This interface has properties that the user can access to control HTML elements.
+	Even the HTML itself can be accessed.
+
+	For example: A variable containing a div element is of type HTMLDivElement.
+	That means you can access div properties easily in your typescript code by doing so:
+
+	The interface of each HTMLElement can be found on the Technical Summary section, under DOM Interface:
+	<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div#technical_summary"></a>
+</p>
+
+<pre class="code-text-section">
+import &#123; NgModule &#125; from '@angular/core';
+import &#123; RouterModule, Routes &#125; from '@angular/router';
+import &#123; MedicalRecordComponent &#125; from './components/medical-record/medical-record.component';
+
+const routes: Routes = [
+	&#123; path: 'new-component', component: NewComponent &#125;,
+];
+
+@NgModule(&#123;
+	imports: [
+		RouterModule.forRoot(routes)
+	],
+	exports: [RouterModule],
+&#125;)
+export class AppRoutingModule &#123; &#125;
+</pre>
