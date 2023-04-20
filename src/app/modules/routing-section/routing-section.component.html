@@ -1,0 +1,82 @@
+<h3>
+	Routing
+</h3>
+<p>
+	You can add your route table in different ways:
+</p>
+
+<!-- #region Option 1 -->
+<p>
+	1 - Isolating your route table into a module and importing it
+</p>
+<pre class="code-text-section">
+<span class="code-purple"><span>import</span></span> &#123; NgModule &#125; from '@angular/core';
+<span class="code-purple">import</span> &#123; RouterModule, Routes &#125;from '@angular/router';
+
+const routes: Routes = [&#123;
+	path: 'example-module', loadChildren: () => <span>import</span>('./modules/example-module/Example.module').then(m => m.ExampleModule)
+&#125;];
+
+@NgModule(&#123;
+imports: [
+	RouterModule.forRoot(routes)
+],
+exports: [RouterModule],
+&#125;)
+export class AppRoutingModule &#123; &#125;
+</pre>
+
+<pre class="code-text-section">
+import &#123; NgModule &#125; from '@angular/core';
+import &#123; BrowserModule &#125; from '@angular/platform-browser';
+import &#123; AppRoutingModule &#125; from './app-routing.module';
+
+@NgModule(&#123;
+	declarations: [
+		AppComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent]
+&#125;)
+export class AppModule &#123; &#125;
+</pre>
+<!-- #endregion -->
+
+<!-- #region Option 2 -->
+<p>
+	2 - Writing your route table inside the module itself
+</p>
+
+<pre class="code-text-section">
+import &#123; NgModule &#125; from '@angular/core';
+import &#123; BrowserModule &#125; from '@angular/platform-browser';
+import &#123; AppRoutingModule &#125; from './app-routing.module';
+
+const routes: Routes = [&#123;
+	path: 'module-A', loadChildren: () => <span>import</span>('./modules/module-a/ModuleA.module').then(m => m.ModuleAModule)
+&#125;];
+
+@NgModule(&#123;
+	declarations: [
+		AppComponent
+	],
+	imports: [
+		BrowserModule,
+		RouterModule.forRoot(routes),
+	],
+	providers: [],
+	bootstrap: [AppComponent]
+&#125;)
+export class AppModule &#123; &#125;
+</pre>
+<!-- #endregion -->
+
+<p>
+	The second one is usually better. Unless your route table is really big. Then I'd suggest using the first option.
+</p>
+
+
