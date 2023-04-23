@@ -1,0 +1,8 @@
+<ng-container *ngIf="formField?.errors && (formField?.touched || formField?.dirty )">
+	<div *ngIf="errorMessageDictIsEmpty else conditionalErrorMessageTmp">
+		<span [class]="styleClass">{{errorMessage}}</span>
+	</div>
+	<ng-template #conditionalErrorMessageTmp>
+		<span [class]="styleClass">{{getConditionalErrorMessage()}}</span>
+	</ng-template>
+</ng-container>
