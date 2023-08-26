@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { CardModule } from './components/card/card.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RoutingSectionModule } from './modules/routing-section/routing-section.module';
-import { HtmlElementSectionModule } from './modules/html-element-section/html-element-section.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormErrorMessageComponent } from './components/form-error-message/form-error-message.component';
 import { FormErrorMessageModule } from './components/form-error-message/form-error-message.module';
@@ -26,7 +25,6 @@ import { FormErrorMessageModule } from './components/form-error-message/form-err
 		FormErrorMessageModule,
 		// Sections
 		RoutingSectionModule,
-		HtmlElementSectionModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

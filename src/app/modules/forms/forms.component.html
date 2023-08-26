@@ -1,0 +1,25 @@
+<input type="text" [formControl]="name">
+<div *ngIf="name.errors">
+	Tem erro aqui man
+</div>
+
+<form [formGroup]="profileForm" (ngSubmit)="submitForm()" class="flex-column">
+
+	<label for="first-name">First Name: </label>
+	<input id="first-name" type="text" formControlName="firstName">
+	<app-form-error-message [formField]="profileForm.get('firstName')"
+		[errorMessageDict]="errorMessageDict"></app-form-error-message>
+
+	<label for="last-name">Last Name: </label>
+	<input id="last-name" type="text" formControlName="lastName">
+	<app-form-error-message [formField]="profileForm.get('lastName')"
+		errorMessage="Please, fill in this field"></app-form-error-message>
+
+	<div style="width: 200px;">
+		<button type="submit">Submit</button>
+	</div>
+</form>
+
+<div style="width: 200px;margin-bottom: 300px;">
+	<button (click)="validateFormFields()">Validate Form</button>
+</div>

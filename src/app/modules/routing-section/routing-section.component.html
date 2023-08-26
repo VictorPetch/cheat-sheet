@@ -13,9 +13,12 @@
 <span class="code-purple"><span>import</span></span> &#123; NgModule &#125; from '@angular/core';
 <span class="code-purple">import</span> &#123; RouterModule, Routes &#125;from '@angular/router';
 
-const routes: Routes = [&#123;
-	path: 'example-module', loadChildren: () => <span>import</span>('./modules/example-module/Example.module').then(m => m.ExampleModule)
-&#125;];
+const routes: Routes = [
+&#123;
+	path: 'example-module', loadChildren: () => <span>import</span>('./modules/example-module/Example.module') .then(m => m.ExampleModule) 
+&#125;
+&#123; path: '**', redirectTo: 'example-module' &#125;,
+];
 
 @NgModule(&#123;
 imports: [
@@ -79,4 +82,12 @@ export class AppModule &#123; &#125;
 	The second one is usually better. Unless your route table is really big. Then I'd suggest using the first option.
 </p>
 
-
+<!-- #region Routing -->
+<div>
+	<h3 class="title">Routing</h3>
+	<p>
+		Read <a style="color: cadetblue;"
+			href="https://stackoverflow.com/questions/42992212/in-angular-what-is-pathmatch-full-and-what-effect-does-it-have">this</a>
+		to better understand angular routing.
+	</p>
+</div>

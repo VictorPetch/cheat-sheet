@@ -1,0 +1,47 @@
+	<!-- #region Text overflow -->
+	<div>
+		<h3 class="title">Text overflow</h3>
+		<p>
+			Text Overflow can be done with css:
+		</p>
+		<pre class="code-text-section">
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;		
+		</pre>
+		<div style="text-overflow:ellipsis;overflow: hidden;white-space: nowrap;width: 50px;">
+			asdasdsad asd asd asd asd asdasd asdasdaasd asd adsa sdasd asd
+		</div>
+
+		<p>
+			However, that only works for 1 line and the element that has the text needs to have a set width or
+			max-width. <br>
+			If you want to have a div with responsive width that has a variable text that can be too big, you can use
+			this:
+		</p>
+		<pre>
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+		</pre>
+		<div style="width: 100%;">
+			<span style="text-overflow:ellipsis;overflow: hidden;white-space: nowrap;">
+				asdasdsad asd asd asd asd asdasd asdasdaasd asd adsa sdasd asd
+			</span>
+		</div>
+		<p>
+			Change -webkit-line-clamp value to set the max number of lines before the overflow is forced. <br>
+			Note that the element that contains the text has a responsive width (usually 100% to make it use all the
+			remaining space).
+			It won't work if you do it like this:
+		</p>
+		<pre>
+			<span style="text-overflow:ellipsis;overflow: hidden;white-space: nowrap;width: 100%;">
+				asdasdsad asd asd asd asd asdasd asdasdaasd asd adsa sdasd asd
+			</span>
+		</pre>
+	</div>
+	<!-- #endregion -->

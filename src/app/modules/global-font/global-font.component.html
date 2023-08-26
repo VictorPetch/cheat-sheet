@@ -1,0 +1,37 @@
+<!-- #region Setting font -->
+<div>
+	<h3 class="title">Setting global font</h3>
+	<pre class="code-text-section">
+		Setting font using @font-face.
+		Download the font zip and put it inside a folder.
+		For example: src/assets/font
+		Set the font family using @font-face in your style sheet.
+		It is recommended to create a _font.scss like so:
+		@font-face 
+			font-family: Roboto;
+			src: url(../font/Roboto-Thin.ttf);
+			font-weight: 100;
+		
+
+		font-family should be any name
+		src should be the relative path to your font.
+		font-weight should be relative to your font.
+		Follow this relation:
+		Font: thin / font-weight: 100
+		Font: light / font-weight: 300
+		Font: regular / font-weight: 400
+		Font: medium / font-weight: 500
+		Font: bold / font-weight: 700
+		Font: black / font-weight: 900
+
+		Then, import your _font.scss style into your global style sheet.
+
+		styles.scss:
+		@import '../src/assets/styles/font';
+		body &#123;
+		&#09; font-family: 'Roboto'
+		a	font-weight: 100
+		&#123;
+	</pre>
+</div>
+<!-- #endregion -->

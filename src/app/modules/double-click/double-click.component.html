@@ -1,0 +1,19 @@
+<pre class="code-text-section">
+
+Double click
+// RxJS v6+  
+import &#123; fromEvent &#125; from 'rxjs';
+import &#123; buffer, filter, throttleTime &#125; from 'rxjs/operators'
+// streams
+const clicks$ = fromEvent(document, 'click')
+/*
+Collect clicks that occur, after 250ms emit array of clicks
+*/ 
+clicks$
+.pipe(
+buffer(clicks$.pipe(throttleTime(250))),
+// if array is greater than 1, double click occured
+filter(clickArray => clickArray.length > 1)
+)
+.subscribe(() => console.log('Double Click!'));
+</pre>

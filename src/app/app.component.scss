@@ -1,6 +1,11 @@
 @import '../assets/styles/variables';
 
-// Pseudo navbar on top
+:host {
+	display: flex;
+	flex-direction: column;
+}
+
+// Navbar
 .header {
 	background-color: map-get($cyan-pallete, base);
 	color: $cyan-contrast;
@@ -9,16 +14,26 @@
 	font-size: 24px;
 	font-weight: 400;
 	margin: 0px;
-	position: sticky;
-	top: 0;
-	z-index: 2;
+
+	>span {
+		cursor: pointer;
+	}
 }
 
 // Pretty much the body
 .content {
+	flex-grow: 1;
+
+	display: flex;
+	justify-content: center;
 	padding: 30px 120px 0;
-	width: 60%;
-	margin: 0 auto;
+
+	>div {
+		width: 60%;
+	}
+
+	// margin: 0 auto;
+	// overflow-y: auto;
 }
 
 p {

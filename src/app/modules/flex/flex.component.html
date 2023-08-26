@@ -1,0 +1,36 @@
+<pre class="code-text-section">
+	<div>
+		Best solution: Flex
+		You can set display to flex. By default, all items will try to occupy as much space as possible, equally.
+		You can use flex-basis, flex-grow and flex-shrink to control the layout.
+		flex-basis:
+			This is the default size of the item. Imagine if the flex container is just the right size that fits everyone in without needing to shrink or stretch items. This is equal to width if no items are required to change their size to fit available space.
+			Ex: flex container is 1000px large. It has 3 items with flex-basis set to 200px, 300px and 500px.
+			Since there's no items that needs to resize, this is equivalent of setting width.
+			If the flex container is 1500px, all items will grow to fit the available space, but they'll grow from different start points. 1500 - 1000 equals 500px of available space shared between items.
+			Item 3 will go from 500 to 500 + (1500 - 1000)/3;
+			Item 2 will go from 300 to 300 + (1500 - 1000)/3;
+			Item 1 will go from 200 to 200 + (1500 - 1000)/3;
+			So item 3 (500px) will end up being bigger than item 2(300px) and item 1 (200px).
+			flex-grow is a number that indicates the available space ratio that items will take when growing.
+			By default, flex-grow is set to 1.
+			On the last example, all items were growing equally.
+			If we had the following example:
+			item 3 -> flex-grow: 2
+			item 2 -> flex-grow: 1
+			item 1 -> flex-grow: 1
+			That means the available space will be split into 4 pieces. Item 3 will get 2/4 of the available space.
+			Item 2 and 1 will get 1/4 of the available space.
+			flex-shring is the same, but for resizes that end up shrinking the original container.
+			If the container goes from 1000px to 500px, it needs to take 500px from those 3 items.
+			If flex-shrink is set to 1 for all items, that means every item will shrink 500/3 px.
+			Item 3 will go from 500 to 500 - (1000 - 500)/3;
+			Item 2 will go from 300 to 300 - (1000 - 500)/3;
+			Item 1 will go from 200 to 200 - (1000 - 500)/3;
+	</div>
+	<div style="display:flex">
+		<div style="background-color: red;">Banana</div>
+		<div style="width: 230px;background-color: blue;">Apple</div>
+		<div style="background-color: green;">Pineapple</div>
+	</div>
+</pre>
