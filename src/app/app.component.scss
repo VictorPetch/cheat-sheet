@@ -3,6 +3,7 @@
 :host {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 }
 
 // Navbar
@@ -21,20 +22,19 @@
 }
 
 // Pretty much the body
-.content {
+.content{
 	flex-grow: 1;
-
 	display: flex;
 	justify-content: center;
-	padding: 30px 120px 0;
 
+	padding: 0px 120px 0;
+	
 	>div {
 		width: 60%;
 	}
 
-	// margin: 0 auto;
-	// overflow-y: auto;
 }
+
 
 p {
 	margin-top: 0px;
