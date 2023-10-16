@@ -1,10 +1,17 @@
 # CheatSheet
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+As per the compatibility table, node version ^14.15.0 || ^16.10.0 is recommended. 
+
+## How to run
+
+This project can be run by installing Angular globally or installing node version manager.
+If Angular is globally installed, run `ng serve`.
+If Angular is localy installed, run `npm run start` so that the `ng serve` script is locally executed.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` or `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
